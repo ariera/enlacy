@@ -1,11 +1,25 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'
+gem 'devise'
+gem 'haml'
+gem 'sass'
+gem 'css3buttons'
+
+group :test, :development do
+  gem "rspec-rails", "~> 2.4"
+  gem 'watchr'
+  gem "fuubar"
+  gem 'spork', '~> 0.9.0.rc'
+end
+
+gem 'mysql'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+#gem 'sqlite3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
