@@ -1,9 +1,13 @@
 Enlacy::Application.routes.draw do
-  get "home/index"
-
   devise_for :users
-  resources :home, :only => :index
+
   root :to => 'home#index'
+
+  resources :links
+  
+  match ':login' => 'links#index', :as => "home"
+
+
   
 
 

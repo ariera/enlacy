@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
   # This is in addition to a real persisted field like 'username'
   # attr_accessor :login
   # attr_accessible :login
+
+  has_many :links
   
   
   protected
