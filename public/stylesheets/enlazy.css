@@ -1,2 +1,51 @@
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix {
+  display: inline-block; }
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none; }
+
+ul li {
+  padding: 0px;
+  margin: 0px;
+  position: relative; }
+
+body {
+  background-color: #F3F3F3; }
+
+#wrapper {
+  border-right: 1px solid #E1E1E1;
+  border-bottom: 1px solid #CCC;
+  margin: 20px auto;
+  width: 960px; }
+
 #main {
-  color: black; }
+  border: 1px solid #EEE;
+  background-color: #FFF;
+  padding: 20px; }
+
+ul.links {
+  background-color: #EEE;
+  border: 1px solid #E1E1E1; }
+
+ul.links li {
+  padding: 15px 10px;
+  border-top: 1px solid #E1E1E1; }
+
+ul.links li:first-child {
+  border-top: none; }
