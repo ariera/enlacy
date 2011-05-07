@@ -15,6 +15,29 @@
 .clearfix {
   display: block; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  color: #111; }
+
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.5em; }
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em; }
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em; }
+
+h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em; }
+
 a {
   text-decoration: none;
   color: blue; }
@@ -56,7 +79,6 @@ body {
   float: right; }
 
 ul.main_links, ul.working_links {
-  border: 1px solid #E1E1E1;
   font-size: 1.2em; }
 
 ul.main_links li, ul.working_links li {
