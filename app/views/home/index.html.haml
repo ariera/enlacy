@@ -1,6 +1,7 @@
-
-%p= link_to 'Sign up', new_user_registration_path
-%p= link_to 'login', new_user_session_path
+%p
+  = button_group do
+    = button_link_to 'Sign up', new_user_registration_path
+    = button_link_to 'login', new_user_session_path
 
 - if user_signed_in?
   %p
