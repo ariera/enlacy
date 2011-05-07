@@ -46,18 +46,25 @@ body {
   background-color: #FFF;
   padding: 20px; }
 
-ul.links {
-  /*    background-color:#EEE;
-      border: 1px solid #E1E1E1;*/
+#main_col {
+  display: inline-block;
+  width: 540px; }
+
+#secondary_col {
+  display: inline-block;
+  width: 360px;
+  float: right; }
+
+ul.main_links, ul.working_links {
+  border: 1px solid #E1E1E1;
   font-size: 1.2em; }
 
-ul.links li {
-  padding: 10px 10px;
-  /*    border-top:1px solid #E1E1E1;*/
+ul.main_links li, ul.working_links li {
+  margin-bottom: 20px;
   line-height: 1.1em; }
 
-ul.links li:first-child {
-  border-top: none; }
+ul.working_links a {
+  color: #999; }
 
 span.whole_url {
   font-size: 0.8em;

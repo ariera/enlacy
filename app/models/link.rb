@@ -3,6 +3,9 @@ require 'open-uri'
 class Link < ActiveRecord::Base
   include SanitizeUrl
   
+  scope :main_links, where(:working=>false)
+  scope :working_links, where(:working=>true)
+
   belongs_to :user
 
   before_save :clean_url, :if => Proc.new { |l| l.url_changed?}

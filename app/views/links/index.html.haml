@@ -1,14 +1,30 @@
 %h2 links for #{@user.login}
 
-- form_for Link.new do |f|
-    =f.label :url
-    =f.text_field :url
-    =submit_tag :add, :class => 'button'
+#main_col
+    - form_for Link.new do |f|
+        =f.label :url
+        =f.text_field :url
+        =submit_tag :add, :class => 'button'
 
-%ul.links
-    - @links.each do |l|
-        %li
-            = link_to l.title, l.url
-            = link_to 'delete', link_path(l), :method => 'delete'
-            %br
-            %span.whole_url= link_to l.url, l.url
+    %ul.main_links
+        - @main_links.each do |l|
+            %li
+                = link_to l.title, l.url
+                = link_to 'delete', link_path(l), :method => 'delete'
+                %br
+                %span.whole_url= link_to l.url, l.url
+
+#secondary_col
+    - form_for Link.new do |f|
+        =f.label :url
+        =f.text_field :url
+        =hidden_field_tag "link[working]", "true"
+        =submit_tag :add, :class => 'button'
+
+    %ul.working_links
+        - @working_links.each do |l|
+            %li
+                = link_to l.title, l.url
+                = link_to 'delete', link_path(l), :method => 'delete'
+                %br
+                %span.whole_url= link_to l.url, l.url

@@ -14,6 +14,9 @@ class User < ActiveRecord::Base
   # attr_accessible :login
 
   has_many :links
+  has_many :main_links, :class_name=>"Link", :conditions=>{:working=>false}
+  has_many :working_links, :class_name=>"Link", :conditions=>{:working=>true}
+
 
   def to_param
     login
