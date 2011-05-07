@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   # attr_accessor :login
   # attr_accessible :login
 
-  has_many :links
+  has_many :links, :order => "position"
 
   def to_param
     login

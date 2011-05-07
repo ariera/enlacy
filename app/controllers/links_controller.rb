@@ -13,6 +13,15 @@ class LinksController < ApplicationController
     redirect_to home_path(current_user)
   end
   
+  def sort
+    links = current_user.links
+    links.each do |link|
+      link.position = params['link'].index(link.id.to_s) + 1
+      link.save
+    end
+    redirect_to home_path(current_user)
+  end
+  
   def destroy
     render :text => params[:id]
   end

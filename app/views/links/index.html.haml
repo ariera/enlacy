@@ -1,3 +1,7 @@
+=javascript_include_tag 'links'
+        
+
+
 %h2 links for #{@user.login}
 
 - form_for Link.new do |f|
@@ -7,6 +11,7 @@
 
 %ul.links
     - @links.each do |l|
-        %li
+        %li{:id => "link_#{l.id}"}
+            %span.handle [handle]
             = link_to l.title, l.url
             = danger_trash_button_link_to 'delete', link_path(l), :method => 'delete', :class => ''

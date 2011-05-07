@@ -12,6 +12,7 @@ group :test, :development do
   gem 'watchr'
   gem "fuubar"
   gem 'spork', '~> 0.9.0.rc'
+  gem 'ruby-debug'
 end
 
 gem 'mysql'
