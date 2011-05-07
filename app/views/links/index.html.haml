@@ -1,2 +1,4 @@
-- @links.each do |l|
-   = l.title
+%ul.links
+  - @links.each do |l|
+    %li
+      = l.title
