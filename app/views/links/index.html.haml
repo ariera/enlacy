@@ -1,8 +1,9 @@
 %h2 links for #{@user.login}
+
 %ul.links
-  - @links.each do |l|
-    %li
-      = l.title
+    - @links.each do |l|
+        %li
+            = l.title
 
 - form_for Link.new do |f|
     =f.label :url

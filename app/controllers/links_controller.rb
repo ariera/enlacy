@@ -8,7 +8,6 @@ class LinksController < ApplicationController
   
   def create
     link = Link.new(params[:link])
-    link.title = link.url
     current_user.links << link
     redirect_to home_path(current_user)
   end
