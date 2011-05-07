@@ -5,6 +5,7 @@ gem 'devise'
 gem 'haml'
 gem 'sass'
 gem 'css3buttons'
+gem 'jquery-rails', '>= 0.2.6'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.4"
