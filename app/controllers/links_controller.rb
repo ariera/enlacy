@@ -1,7 +1,9 @@
 class LinksController < ApplicationController
+  before_filter :authenticate_user!, :expcept => [:index]
+
   def index
-    user=User.find_by_login(params[:login]) || User.first
-    @links= user.links
+    @user=User.find_by_login(params[:login]) || User.first
+    @links= @user.links
   end
   
   def create
