@@ -1,2 +1,9 @@
+%h2 links for #{current_user.login}
+
+- form_for Link.new do |f|
+    =f.label :url
+    =f.text_field :url
+    =submit_tag :add
 - @links.each do |l|
-   = l.title
+    = link_to l.title, l.url
+    = link_to 'delete', link_path(l), :method => 'delete'
