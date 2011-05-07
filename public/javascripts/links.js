@@ -21,4 +21,5 @@ $(document).ready(function(){
         }
     }
     $('.main_links').sortable(options);
+    $('.working_links').sortable(options);
 });
