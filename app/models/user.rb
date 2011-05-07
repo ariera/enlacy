@@ -14,7 +14,10 @@ class User < ActiveRecord::Base
   # attr_accessible :login
 
   has_many :links
-  
+
+  def to_param
+    login
+  end
   
   protected
   
