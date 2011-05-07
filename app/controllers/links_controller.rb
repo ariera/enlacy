@@ -1,5 +1,5 @@
 class LinksController < ApplicationController
-  before_filter :authenticate_user!, :expcept => [:index]
+  before_filter :authenticate_user!, :except => [:index]
 
   def index
     @user=User.find_by_login(params[:login]) || User.first
