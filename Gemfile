@@ -7,8 +7,10 @@ gem 'sass'
 gem 'css3buttons'
 gem 'jquery-rails', '>= 0.2.6'
 gem 'nokogiri'
+gem 'sanitize-url'
 
 group :test, :development do
+  gem 'ruby-debug'
   gem "rspec-rails", "~> 2.4"
   gem 'watchr'
   gem "fuubar"

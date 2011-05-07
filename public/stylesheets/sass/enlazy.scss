@@ -8,6 +8,9 @@
 * html .clearfix { height: 1%;}
 .clearfix {display: block;}
 
+a                         {text-decoration:none; color:blue;}
+a:hover, a:visited        {color:blue;}
+
 ul {margin:0px;padding:0px;list-style-type:none}
 ul li {padding:0px;margin:0px;position:relative;}
 
@@ -29,15 +32,20 @@ body {
 }
 
 ul.links {
-    background-color:#EEE;
-    border: 1px solid #E1E1E1;
+/*    background-color:#EEE;
+    border: 1px solid #E1E1E1;*/
+    font-size:1.2em;
 }
 
 ul.links li {
-    padding:15px 10px;
-    border-top:1px solid #E1E1E1;
+    padding:10px 10px;
+/*    border-top:1px solid #E1E1E1;*/
+    line-height: 1.1em;
 }
 
 ul.links li:first-child {
     border-top:none;
 }
+
+span.whole_url {font-size:0.8em; font-style:italic;}
+span.whole_url a{color:#444;text-decoration:underline;}
