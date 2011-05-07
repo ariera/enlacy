@@ -15,6 +15,7 @@ group :test, :development do
 end
 
 gem 'mysql'
+gem 'acts_as_list'
 
 
 # Bundle edge Rails instead:
