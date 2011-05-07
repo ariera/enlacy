@@ -10,6 +10,7 @@ class LinksController < ApplicationController
   def create
     link = Link.new(params[:link])
     current_user.links << link
+    flash[:alert] = link.errors[:base]
     redirect_to home_path(current_user)
   end
   
