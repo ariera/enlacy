@@ -11,7 +11,7 @@
         =f.text_field :url
         =submit_tag :add, :class => 'button'
 
-    %ul.main_links
+    %ul.main_links{'data-collection' => 'main_links'}
         - @main_links.each do |l|
             %li{:id => "link_#{l.id}"}
                 %span.handle [handle]
@@ -27,7 +27,7 @@
         =hidden_field_tag "link[working]", "true"
         =submit_tag :add, :class => 'button'
 
-    %ul.working_links
+    %ul.working_links{'data-collection' => 'working_links'}
         - @working_links.each do |l|
             %li{:id => "link_#{l.id}"}
                 %span.handle [handle]

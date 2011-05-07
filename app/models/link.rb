@@ -7,7 +7,7 @@ class Link < ActiveRecord::Base
   scope :working_links, where(:working=>true)
 
   belongs_to :user
-  acts_as_list :scope => :user
+  acts_as_list :scope => :user, :top_of_list => 0
 
   before_save :clean_url, :if => Proc.new { |l| l.url_changed?}
   before_save :get_title, :if => Proc.new { |l| l.url_changed?}

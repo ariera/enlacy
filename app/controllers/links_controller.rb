@@ -14,12 +14,17 @@ class LinksController < ApplicationController
   end
   
   def sort
-    links = current_user.links
+    if params[:collection] == 'main_links'
+      links = current_user.main_links
+    elsif params[:collection] == 'working_links'
+      links = current_user.working_links
+    end
+    
     links.each do |link|
-      link.position = params['link'].index(link.id.to_s) + 1
+      link.position = params['link'].index(link.id.to_s)
       link.save
     end
-    redirect_to home_path(current_user)
+    render :nothing => true
   end
   
   def destroy

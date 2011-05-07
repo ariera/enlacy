@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.links').sortable({
+    var options = {
         axis: 'y',
         dropOnEmpty: false,
         handle: '.handle',
@@ -8,15 +8,17 @@ $(document).ready(function(){
         opacity: 0.4,
         scroll: true,
         update: function(){
+            var $this = $(this);
             $.ajax({
                 type: 'post',
-                data: $('.links').sortable('serialize'),
+                data: $this.sortable('serialize'),
                 dataType: 'script',
                 complete: function(request){
-                    $('.links').effect('highlight');
+                    $this.effect('highlight');
                 },
-                url: '/links/sort'
+                url: '/links/sort?collection='+$this.attr('data-collection')
             })
         }
-    });
+    }
+    $('.main_links').sortable(options);
 });
