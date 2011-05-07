@@ -3,12 +3,12 @@ class LinksController < ApplicationController
 
   def index
     @user=User.find_by_login(params[:login]) || User.first
-    @links= @user.links
+    @main_links= @user.main_links
+    @working_links= @user.working_links
   end
   
   def create
     link = Link.new(params[:link])
-    link.title = link.url
     current_user.links << link
     redirect_to home_path(current_user)
   end

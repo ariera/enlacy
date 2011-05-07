@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20110507172259) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "position"
+    t.boolean  "working",    :default => false
   end
 
   create_table "users", :force => true do |t|
