@@ -3,7 +3,11 @@ Enlacy::Application.routes.draw do
 
   root :to => 'home#index'
 
-  resources :links
+  resources :links do
+    collection do
+      post :sort
+    end
+  end
   
   match ':login' => 'links#index', :as => "home"
 
